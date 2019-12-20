@@ -1,5 +1,7 @@
 $font-fuente:Titillium Web, sans-serif;
 $color-fondos: #20232A;
+$font-size:30px;
+$color-white:white;
 
 .section-search{
     width: inherit;
@@ -8,7 +10,25 @@ $color-fondos: #20232A;
 }
 .text-search{
     font-family: $color-fondos;
-    color: white;
-    font-size: 30px;
+    color: $color-white;
+    font-size: $font-size;
     padding: 0rem 0rem 0rem 6rem;
+}
+.select{
+    width:30rem;
+    height: 10vh;
+    text-align: center;
+    font-family: $font-fuente;
+    font-size: $font-size;
+    color:$color-white;
+    background-color: $color-fondos;
+    border-color: $color-white;
+    border-width: 3px;
+}
+.select::-ms-expand {
+    display: none;
+}
+.box-select{
+    display: flex;
+    flex-direction: column;
 }
