@@ -1,0 +1,23 @@
+nav{
+    color: white;
+}
+.item-list{
+    display: flex;
+    width: inherit;
+    height: 8vh;
+    margin-right: 3rem;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    padding-top: 3vh;
+    padding-left: 53rem;
+}
+lo:hover{
+    color: #0066B3;
+}
+.box-home{
+    display: flex;
+    flex-direction: row;
+}

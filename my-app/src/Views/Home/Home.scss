@@ -1,0 +1,15 @@
+$color-fondos: #20232A;
+$font-fuente:'Titillium Web', sans-serif;
+
+body{
+    margin-top: 0;
+}
+.home-section{
+    width: inherit;
+    height: 100vh;
+    margin-top: 0;
+    background-color: $color-fondos;
+    font-family: $font-fuente;
+    color: white;
+    font-size: 20px;
+}
