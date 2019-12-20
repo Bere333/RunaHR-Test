@@ -1,5 +1,5 @@
 $color-fondos: #20232A;
-$font-fuente:'Titillium Web', sans-serif;
+$font-fuente:Titillium Web, sans-serif;
 
 body{
     margin-top: 0;
@@ -22,6 +22,7 @@ body{
     padding: 1vh 0rem 3vh 0rem;
     margin-left: 6rem;
     border-radius: 10px;
+    box-shadow: white;
 }
 .text-home{
     margin: 14vh 6rem 0rem 7rem;

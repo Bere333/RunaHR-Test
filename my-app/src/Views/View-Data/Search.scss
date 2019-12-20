@@ -1,0 +1,14 @@
+$font-fuente:Titillium Web, sans-serif;
+$color-fondos: #20232A;
+
+.section-search{
+    width: inherit;
+    height: 100vh;
+    background-color: $color-fondos;
+}
+.text-search{
+    font-family: $color-fondos;
+    color: white;
+    font-size: 30px;
+    padding: 0rem 0rem 0rem 6rem;
+}
