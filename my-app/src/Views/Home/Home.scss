@@ -10,6 +10,25 @@ body{
     margin-top: 0;
     background-color: $color-fondos;
     font-family: $font-fuente;
-    color: white;
+    color: $color-fondos;
     font-size: 20px;
+}
+.box-home{
+    width: 70rem;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 1vh 0rem 3vh 0rem;
+    margin-left: 6rem;
+    border-radius: 10px;
+}
+.text-home{
+    margin: 14vh 6rem 0rem 7rem;
+    text-align: left;
+}
+.img-cme{
+    width: auto;
+    height: 60vh;
+    margin-top: 5vh;
 }

@@ -20,22 +20,21 @@ class Home extends Component {
     render() {
     return (
       <section className="home-section">
-        <Navbar/>
+        <div>
+          <Navbar/>
+        </div>
         <div className="box-home">
-          <div>
-             <p>
-             ¡Bienvenid@!, aquí podrás conocer sobre las ejecciones <br></br>
-             de masa coronal conocidas hasta la fecha.<br></br>
-             Se pueden consultar por fecha, velocidad, etc.<br></br>
-             ¡Bienvenid@!, aquí podrás conocer sobre las ejecciones <br></br>
-             de masa coronal conocidas hasta la fecha.<br></br>
-             Se pueden consultar por fecha, velocidad, etc.
+            <p className="text-home">
+             ¡Bienvenid@!, aquí podrás aprender sobre las<br></br>
+             Coronal Mass Ejection conocidas hasta la fecha <br></br>
+             y obtenidas gracias a la NASA. Se pueden consultar <br></br>
+             por fecha, velocidad y más.<br></br><br></br>
+             Pero ¿Qué es una CME?...es una onda formada por<br></br>
+             materia y radiación electromagnética proveniente<br></br>
+             del Sol, que va más allá de su superficie. 
              </p>
-          </div>
-          <div>
-            <img src={ImgGif} alt="Coronal Mass Ejection"></img>
-          </div>
-
+          
+            <img src={ImgGif} alt="Coronal Mass Ejection" className="img-cme"></img>
         </div>
       </section>
     );
