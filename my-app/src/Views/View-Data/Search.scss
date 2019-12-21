@@ -12,7 +12,7 @@ $color-white:white;
     font-family: $color-fondos;
     color: $color-white;
     font-size: $font-size;
-    padding: 0rem 0rem 0rem 6rem;
+
 }
 .select{
     width:30rem;
@@ -31,4 +31,25 @@ $color-white:white;
 .box-select{
     display: flex;
     flex-direction: column;
+}
+.box-search{
+   display: flex;
+   flex-direction: row;
+   justify-content:center;
+}
+.box-search p{
+    color:$color-white;
+}
+.input-search{
+    width: 20rem;
+    height: 5vh;
+    border-radius: 10px;
+    font-family: $font-fuente;
+    text-align: center;
+}
+.fa-search{
+    color:$color-white;
+    font-size: 40px;
+    margin-top:0;
+    padding-top: -2rem;
 }

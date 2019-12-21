@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Search.scss'
 
 import Navbar from '../Utils/Navbar/Navbar';
-import Option from '../Utils/Select/Option';
+// import Option from '../Utils/Select/Option';
 
 
 
@@ -14,8 +14,15 @@ class Search extends Component {
                 <Navbar/>
             </div>
             <div>
-                <p className="text-search"><i class="fas fa-search"></i> Buscar CME</p>
-                <div>
+                <div className="box-search">
+                    <div>
+                        <p>Buscar <i className="fas fa-search"></i></p>
+                    </div>
+                    <div>
+                        <input placeholder="Buscar por año, velocidad o ángulo de la CME" className="input-search"></input>
+                    </div>
+                </div>
+                {/* <div>
                     <div className="box-select">
                         <select className="select">
                             <Option value="Buscar por fecha" className="text-option">Buscar por fecha</Option>
@@ -37,11 +44,11 @@ class Search extends Component {
                         </select>
 
                     </div>
-                    <div>
+                    <div> 
 
                     </div>
 
-                </div>
+                </div>*/}
                 
             </div>
            
