@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
 import './Search.scss'
 
 import Navbar from '../Utils/Navbar/Navbar';
-// import Option from '../Utils/Select/Option';
+import { addSearch } from '../../actions/actions';
 
 
 
@@ -11,6 +12,17 @@ class Search extends Component {
         super(props);
         this.state = { input: "" };
       }
+    updateInput = input => {
+        this.setState({ input });
+    };
+    onChange = e => {
+        this.updateInput(e.target.value)
+    }
+    handleAddTodo = () => {
+        this.props.addSearch(this.state.input);
+        this.setState({ input: "" });
+      };
+   
     render() {
     return (
         <section className="section-search">
@@ -20,8 +32,15 @@ class Search extends Component {
             
             <div className="box-search">
                 <div>
-                    <button className="btn-search"><i className="fas fa-search"></i></button>
-                    <input placeholder="Buscar por año, velocidad o ángulo de la CME" className="input-search"></input>
+                    <button className="btn-search" onClick={this.handleAddTodo}>
+                        <i className="fas fa-search"></i>
+                    </button>
+                    <input 
+                        placeholder="Buscar por año, velocidad o ángulo de la CME" 
+                        className="input-search"
+                        onChange={this.onChange}
+                        value={this.state.input}
+                    />
                 </div>
             </div>
            
@@ -29,5 +48,8 @@ class Search extends Component {
         </section>
     )
 }}
+export default connect(
+    null,
+    { Search }
+  )(addSearch);
 
-export default Search;
