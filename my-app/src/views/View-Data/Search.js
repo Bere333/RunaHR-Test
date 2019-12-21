@@ -17,6 +17,7 @@ class Search extends Component {
             <div className="box-search">
                 <div>
                     {/* <i className="fas fa-search"></i> */}
+                    <button><i className="fas fa-search"></i></button>
                     <input placeholder="Buscar por año, velocidad o ángulo de la CME" className="input-search"></input>
                 </div>
             </div>
