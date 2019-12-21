@@ -7,6 +7,10 @@ import Navbar from '../Utils/Navbar/Navbar';
 
 
 class Search extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { input: "" };
+      }
     render() {
     return (
         <section className="section-search">
@@ -16,8 +20,7 @@ class Search extends Component {
             
             <div className="box-search">
                 <div>
-                    {/* <i className="fas fa-search"></i> */}
-                    <button><i className="fas fa-search"></i></button>
+                    <button className="btn-search"><i className="fas fa-search"></i></button>
                     <input placeholder="Buscar por año, velocidad o ángulo de la CME" className="input-search"></input>
                 </div>
             </div>
