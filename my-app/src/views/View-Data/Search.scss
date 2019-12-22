@@ -2,6 +2,7 @@ $font-fuente:Titillium Web, sans-serif;
 $color-fondos: #20232A;
 $font-size:30px;
 $color-white:white;
+$size-box:5vh;
 
 .section-search{
     width: inherit;
@@ -42,14 +43,17 @@ $color-white:white;
 }
 .input-search{
     width: 20rem;
-    height: 5vh;
+    height: $size-box;
     border-radius: 10px;
     font-family: $font-fuente;
     text-align: center;
 }
 .fa-search{
-    color:$color-white;
-    font-size: 40px;
-    margin-top:0;
-    padding-top: -2rem;
+    color:$color-fondos;
+    font-size: 28px;
+    margin-top:0; 
 }
+.btn-search{
+    border-radius: 5px;
+}
+
