@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { addSearch } from '../actions/actions';
+import {loadData} from '../actions/actionCreators';
 
 class AddSearch extends Component {
     constructor(props) {
@@ -12,10 +13,13 @@ class AddSearch extends Component {
     };
     onChange = e => {
         this.updateInput(e.target.value)
-    }
-    handleAddTodo = () => {
+      }
+      handleAddTodo = () => {
+        this.props.dispatch(loadData('holi'))
         this.props.addSearch(this.state.input);
         this.setState({ input: "" });
+        console.log('holi');
+        
       };
   
     render() {

@@ -9,7 +9,7 @@ import Search from '../views/View-Data/Search'
 
 const Root = ({ store }) => (
   <Provider store={store}>
-    <Router component={App}>
+    <Router component={App} basename={process.env.PUBLIC_URL}>
       <Route exact path="/" component={Home} />
       <Route path="/search" component={Search}/>
     </Router>
