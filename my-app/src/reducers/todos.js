@@ -1,28 +1,11 @@
-import {ADD_SEARCH} from '../actions/actionTypes';
+//import {ADD_SEARCH} from '../actions/actionTypes';
 
-const initialState = {
-    allIds: [],
-    byIds: {}
-  };
+const defaultState = [];
 
-  export default function(state = initialState, action) {
-    switch (action.type) {
-      case ADD_SEARCH: {
-        const { id, content } = action.payload;
-        return {
-          ...state,
-          allIds: [...state.allIds, id],
-          byIds: {
-            ...state.byIds,
-            [id]: {
-              content,
-              completed: false
-            }
-          }
-        };
-      }
-      
-      default:
-        return state;
-    }
+  export default function currentItem(state = defaultState, action) {
+      switch (action.type){
+        default:
+          return state
+      } 
   }
+ 

@@ -18,6 +18,9 @@ class Search extends Component {
             <div className="box-search">
                 <AddSearch></AddSearch>
             </div>
+            <div className="box-cmes">
+
+            </div>
            
            
         </section>

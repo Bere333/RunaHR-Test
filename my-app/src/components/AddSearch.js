@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { addSearch } from '../actions/actions';
-import {loadData} from '../actions/actionCreators';
+//import {loadData} from '../actions/actionCreators';
 
 class AddSearch extends Component {
     constructor(props) {
@@ -11,22 +11,24 @@ class AddSearch extends Component {
     updateInput = input => {
         this.setState({ input });
     };
-    onChange = e => {
+    onChange = e => { 
         this.updateInput(e.target.value)
+        console.log(e.target.value)
+        //this.props.dispatch(loadData(e.target.value))
       }
-      handleAddTodo = () => {
-        this.props.dispatch(loadData('holi'))
-        this.props.addSearch(this.state.input);
-        this.setState({ input: "" });
-        console.log('holi');
-        
-      };
+    handleAddTodo = () => {
+      this.props.addSearch(this.state.input);
+      this.setState({ input: "" });
+      console.log('holi');
+      
+    };
   
     render() {
       return (
             <div>
-                <button className="btn-search" onClick={this.handleAddTodo}>
-                    <i className="fas fa-search"></i>
+                <button className="btn-search" 
+                    onClick={this.handleAddTodo}>
+                        <i className="fas fa-search"></i>
                 </button>
                 <input 
                     placeholder="Buscar por año, velocidad o ángulo de la CME" 
