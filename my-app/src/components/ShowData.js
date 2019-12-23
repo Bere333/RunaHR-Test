@@ -11,9 +11,19 @@ class ShowData extends Component{
       renderdata() {
         return this.props.data.map((x) => {
           return (
-            <div key={x.speed}>
-                  <h1 key={x.speed}>Nombre: {x.speed}</h1>
-               </div> 
+              
+            <div key={x.associatedCMEID} className="box-cme">
+                <h1 key={x.associatedCMEID}>Tipo: {x.type}</h1>
+                <p>
+                    Catálogo: {x.catalog} <br></br>
+                    Latitud: {x.latitude} <br></br>
+                    Longitud: {x.longitude}<br></br>
+                    Velocidad: {x.speed}<br></br>
+                    Fecha: {x.time21_5}<br></br>
+                    Notas: {x.note}<br></br>
+                </p>
+            </div> 
+              
           )
         })
       }

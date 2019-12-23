@@ -6,7 +6,7 @@ $size-box:5vh;
 
 .section-search{
     width: inherit;
-    height: 100vh;
+    height: auto;
     background-color: $color-fondos;
 }
 .text-search{
@@ -82,5 +82,13 @@ $size-box:5vh;
     width: auto;
     height: 6vh;
     margin: 0;
+}
+.box-cme{
+    width: 23rem;
+    height: 18vh;
+    background-color: #E6993E;
+    border-radius: 10px;
+    margin-top: 4vh;
+    font-size: 10px;
 }
 
