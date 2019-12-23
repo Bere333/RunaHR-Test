@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/RunaHR-Test/static/css/main.9bd4ac7c.chunk.css",
+    "main.js": "/RunaHR-Test/static/js/main.090d6ac6.chunk.js",
+    "main.js.map": "/RunaHR-Test/static/js/main.090d6ac6.chunk.js.map",
+    "runtime-main.js": "/RunaHR-Test/static/js/runtime-main.6ffc2344.js",
+    "runtime-main.js.map": "/RunaHR-Test/static/js/runtime-main.6ffc2344.js.map",
+    "static/js/2.d4ec0c45.chunk.js": "/RunaHR-Test/static/js/2.d4ec0c45.chunk.js",
+    "static/js/2.d4ec0c45.chunk.js.map": "/RunaHR-Test/static/js/2.d4ec0c45.chunk.js.map",
+    "index.html": "/RunaHR-Test/index.html",
+    "precache-manifest.c2fd334a76bd5cde27985f4a64ab38fb.js": "/RunaHR-Test/precache-manifest.c2fd334a76bd5cde27985f4a64ab38fb.js",
+    "service-worker.js": "/RunaHR-Test/service-worker.js",
+    "static/css/main.9bd4ac7c.chunk.css.map": "/RunaHR-Test/static/css/main.9bd4ac7c.chunk.css.map",
+    "static/js/2.d4ec0c45.chunk.js.LICENSE": "/RunaHR-Test/static/js/2.d4ec0c45.chunk.js.LICENSE",
+    "static/media/cme_sun.gif": "/RunaHR-Test/static/media/cme_sun.0cc0a798.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6ffc2344.js",
+    "static/js/2.d4ec0c45.chunk.js",
+    "static/css/main.9bd4ac7c.chunk.css",
+    "static/js/main.090d6ac6.chunk.js"
+  ]
+}
