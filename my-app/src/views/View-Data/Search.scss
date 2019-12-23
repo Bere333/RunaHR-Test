@@ -92,15 +92,22 @@ $size-box:5vh;
     font-size: 10px;
 }
 .box-all{
-    width: inherit;
-    height: 77vh;
+    width: 80rem;
+    height: 66vh;
     display: flex;
     margin: 0;
     padding: 0;
     color: $color-white;
     flex-wrap: wrap;
-    overflow: auto;
+    overflow:scroll;
+    overflow-x: hidden;
     justify-content: space-around;
     align-items: center;
+    background-color: $color-fondos;
+}
+.fa-spinner{
+    color: white;
+    z-index: 999;
+
 }
 

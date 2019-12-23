@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../views/View-Data/Search.scss';
 import getResults from '../actions/getResults';
-import {getData} from '../actions/getdata';
 
 class BarSearch extends Component{
     constructor(props) {
@@ -14,9 +13,6 @@ class BarSearch extends Component{
 
         this.onChangeInput = this.onChangeInput.bind(this);
     }
-    componentDidMount() {
-        this.props.dispatch(getData())
-      }
 
     onChangeInput(text) {
         const {
@@ -25,7 +21,7 @@ class BarSearch extends Component{
 
         this.setState({ text });
 
-        getResults(text, this.props.data);
+        getResults(text);
 
         
     }
@@ -52,16 +48,8 @@ class BarSearch extends Component{
     }
 }
 
-const mapDispatchToProps = dispatch => ({
-    dispatch,
+const mapDispatchToProps = {
     getResults
-})
-    
+};
 
-const mapStateToProps = state => {
-    return {
-      data: state.data.list
-    }
-  }
-
-export default connect(mapStateToProps, mapDispatchToProps)(BarSearch);
+export default connect(null, mapDispatchToProps)(BarSearch);

@@ -8,13 +8,13 @@ import ShowData from '../components/ShowData';
 //import {loadSuggestions} from '../actions/getSuggestions'
 
 function AddSearch(props){
-  // const {
+  const {
   //   // text,
   //   // onChangeInput,
-  //   //results
-  // } = props
+    results
+  } = props
   
- //const isEmpty = results.length === 0;
+ const isEmpty = results.length === 0;
       return (
         <Fragment>
           <div className="box-target">
@@ -22,7 +22,7 @@ function AddSearch(props){
                 <BarSearch/>
             </div>
             <div className="box-result">
-              {/* {isEmpty?<h1>No hay resultados</h1>:results.map(x=>
+              {isEmpty?<h1>Cargando resultados <i className="fas fa-spinner fa-pulse"></i></h1>:results.map(x=>
                 <div
                 key={x.associatedCMEID}
                 className="target-info"
@@ -30,7 +30,7 @@ function AddSearch(props){
                       <h1 key={x.associatedCMEID}>Nombre: {x.note}</h1>
                       <p className="p-text">ID: {x.id}</p>
                 </div>
-              )} */}
+              )}
             </div>
             <ShowData />
           </div>
