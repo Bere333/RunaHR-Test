@@ -92,12 +92,14 @@ $size-box:5vh;
     font-size: 10px;
 }
 .box-all{
+    width: inherit;
+    height: 77vh;
     display: flex;
     margin: 0;
     padding: 0;
     color: $color-white;
     flex-wrap: wrap;
-    overflow: scroll;
+    overflow: auto;
     justify-content: space-around;
     align-items: center;
 }
