@@ -23,7 +23,7 @@ class ShowData extends Component{
         return(
             <Fragment>
             <div>
-            {this.renderdata}
+                {this.renderdata()}
 
             </div>
 
@@ -34,7 +34,7 @@ class ShowData extends Component{
 
 const mapStateToProps = state => {
     return {
-      data: state.data
+      data: state.data.list
     }
   }
   const mapDispatchToProps = dispatch => ({
