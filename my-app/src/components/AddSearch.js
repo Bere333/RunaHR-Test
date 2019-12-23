@@ -1,5 +1,7 @@
 import React, {Fragment} from 'react';
-import BarSearch from '../components/BarSearch'
+import BarSearch from '../components/BarSearch';
+import '../views/View-Data/Search.scss';
+import ShowData from '../components/ShowData';
 //import { connect } from "react-redux";
 //import { addSearch } from '../actions/actions';
 //import {loadData} from '../actions/actionCreators';
@@ -7,8 +9,8 @@ import BarSearch from '../components/BarSearch'
 
 function AddSearch(props){
   const {
-    text,
-    onChangeInput,
+    // text,
+    // onChangeInput,
     results
   } = props
   
@@ -25,11 +27,12 @@ function AddSearch(props){
                 key={x.id}
                 className="target-info"
                 >
-                    <h1>{x.name}</h1>
+                      <h1 key={x.id}>Nombre: {x.name}</h1>
+                      <p className="p-text">ID: {x.id}</p>
                 </div>
               )}
             </div>
-
+            <ShowData/>
           </div>
         </Fragment>
 

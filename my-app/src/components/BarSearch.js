@@ -32,11 +32,11 @@ class BarSearch extends Component{
         } = this.state;
         return(
             <div>
-                <button className="btn-search">
+                {/* <button className="btn-search">
                             <i className="fas fa-search"></i>
-                    </button>
+                    </button> */}
                     <input 
-                        placeholder="Buscar por año, velocidad o ángulo de la CME" 
+                        placeholder="🔍 Buscar por año, velocidad o ángulo de la CME" 
                         className="input-search"
                         text={text}
                         onChange={this.onChangeInput}
