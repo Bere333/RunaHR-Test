@@ -1,3 +1,18 @@
+## Planeación
+
+Con ayuda de la metodología Agile, se planeó un tablero Kanban en el que organizaron las tareas a realizar (To do), entre las que se encuentra
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

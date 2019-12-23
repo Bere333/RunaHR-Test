@@ -1,50 +1,45 @@
-import React, { Component } from 'react';
-import { connect } from "react-redux";
-import { addSearch } from '../actions/actions';
+import React, {Fragment} from 'react';
+//import { connect } from "react-redux";
+//import { addSearch } from '../actions/actions';
 //import {loadData} from '../actions/actionCreators';
+//import {loadSuggestions} from '../actions/getSuggestions'
 
-class AddSearch extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { input: "" };
-      }
-    updateInput = input => {
-        this.setState({ input });
-    };
-    onChange = e => { 
-        this.updateInput(e.target.value)
-        console.log(e.target.value)
-        //this.props.dispatch(loadData(e.target.value))
-      }
-    handleAddTodo = () => {
-      this.props.addSearch(this.state.input);
-      this.setState({ input: "" });
-      console.log('holi');
-      
-    };
+function AddSearch(props){
+  const {
+    results,
+  } = props
   
-    render() {
+  const isEmpty = results.length === 0;
       return (
+        <Fragment>
+          <div className="box-target">
             <div>
-                <button className="btn-search" 
-                    onClick={this.handleAddTodo}>
+                <button className="btn-search">
                         <i className="fas fa-search"></i>
                 </button>
                 <input 
                     placeholder="Buscar por año, velocidad o ángulo de la CME" 
                     className="input-search"
-                    onChange={this.onChange}
-                    value={this.state.input}
+                  
                 />
             </div>
+            <div className="box-result">
+              {isEmpty?<h1>No hay resultados</h1>:results.map(x=>
+                <div
+                key={x.associatedCMEID}
+                className="target-info"
+                ></div>
+              )}
+            </div>
+
+          </div>
+        </Fragment>
 
       )
-    }}
+    }
 
-    export default connect(
-        null,
-        { addSearch }
-      )(AddSearch);
+  
+    export default AddSearch;
 
 
 

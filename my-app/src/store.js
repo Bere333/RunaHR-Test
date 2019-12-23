@@ -1,11 +1,11 @@
 import { combineReducers, createStore } from 'redux';
-import todos from './reducers/todos';
+import suggestions from './reducers/suggestions';
 import results from './reducers/results';
 import currentItem from './reducers/currentItem'
 import { routerReducer } from 'react-router-redux';
 
 export default createStore(combineReducers({
-    todos,
+    suggestions,
     results,
     currentItem,
     routing: routerReducer,

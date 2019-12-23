@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './Search.scss';
+import { connect } from "react-redux";
+//import getSuggestions from '../../actions/getSuggestions';
+import getResults from '../../actions/getResults'
 
 import Navbar from '../Utils/Navbar/Navbar';
 import AddSearch from '../../components/AddSearch';
@@ -8,7 +11,23 @@ import AddSearch from '../../components/AddSearch';
 
 
 class Search extends Component {
+    constructor(props){
+        super(props);
+        this.state={
+            text:''
+        }
+    }
+    onChangeInput (text){
+        this.setState({text})
+        this.props.getResults(text)
+    }
     render() {
+        const {results} = this.props;
+        const {text} = this.state;
+        console.log(results);
+        console.log(text);
+        
+        
     return (
         <section className="section-search">
             <div>
@@ -16,7 +35,12 @@ class Search extends Component {
             </div>
             
             <div className="box-search">
-                <AddSearch></AddSearch>
+                <AddSearch
+                    results={results}
+                    onChangeInput={this.onChangeInput}
+                    text={text}
+                   
+                ></AddSearch>
             </div>
             <div className="box-cmes">
 
@@ -26,5 +50,14 @@ class Search extends Component {
         </section>
     )
 }}
-export default Search;
+const mapDispatchToProps = {
+    getResults
+}
+const mapStateToProps = state =>{
+    return{
+        results: state.results
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search);
 

@@ -56,4 +56,16 @@ $size-box:5vh;
 .btn-search{
     border-radius: 5px;
 }
+.box-result{
+    padding-top: 4vh;
+}
+.box-target{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: $color-white;
+}
+.target-info{
+    color: $color-white;
+}
 
