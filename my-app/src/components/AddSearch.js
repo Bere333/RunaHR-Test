@@ -1,44 +1,46 @@
-import React, { Component } from 'react';
-import { connect } from "react-redux";
-import { addSearch } from '../actions/actions';
+import React, {Fragment} from 'react';
+import BarSearch from '../components/BarSearch';
+import '../views/View-Data/Search.scss';
+import ShowData from '../components/ShowData';
+//import { connect } from "react-redux";
+//import { addSearch } from '../actions/actions';
+//import {loadData} from '../actions/actionCreators';
+//import {loadSuggestions} from '../actions/getSuggestions'
 
-class AddSearch extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { input: "" };
-      }
-    updateInput = input => {
-        this.setState({ input });
-    };
-    onChange = e => {
-        this.updateInput(e.target.value)
-    }
-    handleAddTodo = () => {
-        this.props.addSearch(this.state.input);
-        this.setState({ input: "" });
-      };
+function AddSearch(props){
+  const {
+  //   // text,
+  //   // onChangeInput,
+    results
+  } = props
   
-    render() {
+ const isEmpty = results.length === 0;
       return (
+        <Fragment>
+          <div className="box-target">
             <div>
-                <button className="btn-search" onClick={this.handleAddTodo}>
-                    <i className="fas fa-search"></i>
-                </button>
-                <input 
-                    placeholder="Buscar por año, velocidad o ángulo de la CME" 
-                    className="input-search"
-                    onChange={this.onChange}
-                    value={this.state.input}
-                />
+                <BarSearch/>
             </div>
+            <div className="box-result">
+              {isEmpty?<h1>Cargando resultados <i className="fas fa-spinner fa-pulse"></i></h1>:results.map(x=>
+                <div
+                key={x.associatedCMEID}
+                className="target-info"
+                >
+                      <h1 key={x.associatedCMEID}>Nombre: {x.note}</h1>
+                      <p className="p-text">ID: {x.id}</p>
+                </div>
+              )}
+            </div>
+            <ShowData />
+          </div>
+        </Fragment>
 
       )
-    }}
+    }
 
-    export default connect(
-        null,
-        { addSearch }
-      )(AddSearch);
+  
+    export default AddSearch;
 
 
 

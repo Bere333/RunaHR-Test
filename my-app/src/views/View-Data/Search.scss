@@ -56,4 +56,58 @@ $size-box:5vh;
 .btn-search{
     border-radius: 5px;
 }
+.box-result{
+    padding-top: 4vh;
+}
+.box-target{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: $color-white;
+}
+.target-info{
+    display: flex;
+    flex-direction: column;
+    color: $color-fondos;
+    width: 23rem;
+    height: 18vh;
+    background-color: palevioletred;
+    border-radius: 10px;
+    margin-top: 4vh;
+}
+.p-text{
+    color: $color-fondos;
+}
+.img-cme{
+    width: auto;
+    height: 6vh;
+    margin: 0;
+}
+.box-cme{
+    width: 23rem;
+    height: 18vh;
+    background-color: #E6993E;
+    border-radius: 10px;
+    margin-top: 4vh;
+    font-size: 10px;
+}
+.box-all{
+    width: 80rem;
+    height: 66vh;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    color: $color-white;
+    flex-wrap: wrap;
+    overflow:scroll;
+    overflow-x: hidden;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color-fondos;
+}
+.fa-spinner{
+    color: white;
+    z-index: 999;
+
+}
 

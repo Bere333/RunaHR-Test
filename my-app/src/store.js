@@ -1,8 +1,14 @@
-import { combineReducers, createStore } from "redux";
-import rootReducer from "./reducers/todos";
+import { combineReducers, createStore, applyMiddleware} from 'redux';
+import results from './reducers/results';
+import {showData} from './reducers/data';
+import thunk from 'redux-thunk';
+
+
+
 import { routerReducer } from 'react-router-redux';
 
 export default createStore(combineReducers({
-    rootReducer,
+    results,
+    data:showData,
     routing: routerReducer,
-}));
+}), applyMiddleware(thunk));
