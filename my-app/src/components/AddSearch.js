@@ -14,14 +14,14 @@ function AddSearch(props){
     results
   } = props
   
-  const isEmpty = results.length === 0;
+ // const isEmpty = results.length === 0;
       return (
         <Fragment>
           <div className="box-target">
             <div>
                 <BarSearch/>
             </div>
-            <div className="box-result">
+            {/* <div className="box-result">
               {isEmpty?<h1>No hay resultados</h1>:results.map(x=>
                 <div
                 key={x.id}
@@ -31,7 +31,7 @@ function AddSearch(props){
                       <p className="p-text">ID: {x.id}</p>
                 </div>
               )}
-            </div>
+            </div> */}
             <ShowData/>
           </div>
         </Fragment>

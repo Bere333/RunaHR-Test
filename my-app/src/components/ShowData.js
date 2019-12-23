@@ -30,10 +30,11 @@ class ShowData extends Component{
      
     render(){
         //const {data} = this.props
+        const isEmpty =  this.props.data.length === 0;
         return(
             <Fragment>
-            <div>
-                {this.renderdata()}
+            <div className="box-all">
+            {isEmpty?<h1>Cargando resultados <i class="fas fa-spinner fa-pulse"></i></h1>: this.renderdata()}
 
             </div>
 

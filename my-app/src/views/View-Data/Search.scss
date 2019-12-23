@@ -91,4 +91,10 @@ $size-box:5vh;
     margin-top: 4vh;
     font-size: 10px;
 }
+.box-all{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
 
