@@ -51,9 +51,7 @@ class Search extends Component {
         </section>
     )
 }}
-// const mapDispatchToProps = {
-//     getResults
-// }
+
 const mapStateToProps = state =>{
     return{
         results: state.results

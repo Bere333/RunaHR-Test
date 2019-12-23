@@ -13,6 +13,7 @@ export function getData() {
                     payload: response.data 
                 } ) 
             }) 
+            
     }
     
 } 

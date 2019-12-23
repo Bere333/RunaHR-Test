@@ -29,14 +29,13 @@ class ShowData extends Component{
       }
      
     render(){
-        //const {data} = this.props
-        const isEmpty =  this.props.data.length === 0;
+        const isEmpty =  this.props.data === 0;
         return(
             <Fragment>
-            <div className="box-all">
-            {isEmpty?<h1>Cargando resultados <i class="fas fa-spinner fa-pulse"></i></h1>: this.renderdata()}
+                <div className="box-all">
+                {isEmpty?<h1>Cargando resultados <i className="fas fa-spinner fa-pulse"></i></h1>: this.renderdata()}
 
-            </div>
+                </div>
 
             </Fragment>
         )
@@ -49,7 +48,7 @@ const mapStateToProps = state => {
     }
   }
   const mapDispatchToProps = dispatch => ({
-    dispatch                // ← Add this
+    dispatch                
  })
   
   export default connect(mapStateToProps, mapDispatchToProps)(ShowData)

@@ -8,31 +8,31 @@ import ShowData from '../components/ShowData';
 //import {loadSuggestions} from '../actions/getSuggestions'
 
 function AddSearch(props){
-  const {
-    // text,
-    // onChangeInput,
-    results
-  } = props
+  // const {
+  //   // text,
+  //   // onChangeInput,
+  //   //results
+  // } = props
   
- // const isEmpty = results.length === 0;
+ //const isEmpty = results.length === 0;
       return (
         <Fragment>
           <div className="box-target">
             <div>
                 <BarSearch/>
             </div>
-            {/* <div className="box-result">
-              {isEmpty?<h1>No hay resultados</h1>:results.map(x=>
+            <div className="box-result">
+              {/* {isEmpty?<h1>No hay resultados</h1>:results.map(x=>
                 <div
-                key={x.id}
+                key={x.associatedCMEID}
                 className="target-info"
                 >
-                      <h1 key={x.id}>Nombre: {x.name}</h1>
+                      <h1 key={x.associatedCMEID}>Nombre: {x.note}</h1>
                       <p className="p-text">ID: {x.id}</p>
                 </div>
-              )}
-            </div> */}
-            <ShowData/>
+              )} */}
+            </div>
+            <ShowData />
           </div>
         </Fragment>
 

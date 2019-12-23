@@ -6,7 +6,7 @@ $size-box:5vh;
 
 .section-search{
     width: inherit;
-    height: auto;
+    height: 100vh;
     background-color: $color-fondos;
 }
 .text-search{
@@ -93,8 +93,12 @@ $size-box:5vh;
 }
 .box-all{
     display: flex;
-    flex-direction: column;
     margin: 0;
     padding: 0;
+    color: $color-white;
+    flex-wrap: wrap;
+    overflow: scroll;
+    justify-content: space-around;
+    align-items: center;
 }
 
