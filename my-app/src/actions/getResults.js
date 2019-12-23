@@ -1,11 +1,11 @@
 //Accion creator para ir a resultados
 import  {ADD_SEARCH} from './actionTypes';
 
-const loadData = id => {
+const getResults = text => {
     return{
         type: ADD_SEARCH,
-        payload:id
+        payload:text
     };
 }
 
-export default loadData;
+export default getResults;

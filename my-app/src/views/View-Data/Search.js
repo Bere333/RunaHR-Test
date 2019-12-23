@@ -14,18 +14,20 @@ class Search extends Component {
     constructor(props){
         super(props);
         this.state={
-            text:''
+            
         }
+       //
     }
-    onChangeInput (text){
-        this.setState({text})
-        this.props.getResults(text)
-    }
+    // onChangeInput (text){
+    //     this.setState({text})
+    //     this.props.getResults(text)
+    //}
     render() {
         const {results} = this.props;
-        const {text} = this.state;
+        //const {text} = this.state;
+        
         console.log(results);
-        console.log(text);
+        //console.log(text);
         
         
     return (
@@ -37,8 +39,7 @@ class Search extends Component {
             <div className="box-search">
                 <AddSearch
                     results={results}
-                    onChangeInput={this.onChangeInput}
-                    text={text}
+                    
                    
                 ></AddSearch>
             </div>
@@ -50,14 +51,14 @@ class Search extends Component {
         </section>
     )
 }}
-const mapDispatchToProps = {
-    getResults
-}
+// const mapDispatchToProps = {
+//     getResults
+// }
 const mapStateToProps = state =>{
     return{
         results: state.results
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+export default connect(mapStateToProps, null)(Search);
 

@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react';
+import BarSearch from '../components/BarSearch'
 //import { connect } from "react-redux";
 //import { addSearch } from '../actions/actions';
 //import {loadData} from '../actions/actionCreators';
@@ -6,7 +7,9 @@ import React, {Fragment} from 'react';
 
 function AddSearch(props){
   const {
-    results,
+    text,
+    onChangeInput,
+    results
   } = props
   
   const isEmpty = results.length === 0;
@@ -14,21 +17,16 @@ function AddSearch(props){
         <Fragment>
           <div className="box-target">
             <div>
-                <button className="btn-search">
-                        <i className="fas fa-search"></i>
-                </button>
-                <input 
-                    placeholder="Buscar por año, velocidad o ángulo de la CME" 
-                    className="input-search"
-                  
-                />
+                <BarSearch/>
             </div>
             <div className="box-result">
               {isEmpty?<h1>No hay resultados</h1>:results.map(x=>
                 <div
-                key={x.associatedCMEID}
+                key={x.id}
                 className="target-info"
-                ></div>
+                >
+                    <h1>{x.name}</h1>
+                </div>
               )}
             </div>
 
